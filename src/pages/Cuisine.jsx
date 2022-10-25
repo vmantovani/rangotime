@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 // import { motion } from 'framer-motion';
 import { useParams } from 'react-router-dom';
 
@@ -21,11 +22,13 @@ function Cuisine() {
 
   return (
     <Grid>
-      {cuisine.map((item) => {
+      {cuisine.map((recipe) => {
         return (
-          <Card key={item.id}>
-            <img src={item.image} alt="" />
-            <h4>{item.title}</h4>
+          <Card key={recipe.id}>
+            <Link to={'/recipe/' + recipe.id}>
+              <img src={recipe.image} alt="" />
+              <h4>{recipe.title}</h4>
+            </Link>
           </Card>
         );
       })}

@@ -37,10 +37,19 @@ function Recipe() {
         >
           Ingredients
         </Button>
-        <div>
-          <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
-          <p dangerouslySetInnerHTML={{ __html: details.instructions }}></p>
-        </div>
+        {activeTab === 'instructions' && (
+          <div>
+            <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
+            <p dangerouslySetInnerHTML={{ __html: details.instructions }}></p>
+          </div>
+        )}
+        {activeTab === 'ingredients' && (
+          <ul>
+            {details.extendedIngredients.map((ingredient) => (
+              <li key={ingredient.id}>{ingredient.original}</li>
+            ))}
+          </ul>
+        )}
       </Info>
     </DetailWrapper>
   );
@@ -52,7 +61,6 @@ const DetailWrapper = styled.div`
   display: flex;
   h2 {
     margin-bottom: 2rem;
-    margin-left: 3rem;
   }
   li {
     font-size: 1.2rem;
@@ -75,6 +83,7 @@ const Button = styled.button`
   margin-right: 1rem;
   font-weight: 600;
   margin-bottom: 2rem;
+  cursor: pointer;
 `;
 
 const Info = styled.div`
