@@ -30,7 +30,7 @@ const Logo = styled(Link)`
   text-decoration: none;
   color: #00846a;
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 400;
   font-family: 'Italianno', cursive;
   margin-right: 1rem;
 `;

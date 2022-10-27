@@ -37,7 +37,8 @@ const FormStyle = styled.form`
     font-size: 1.5rem;
     padding: 1rem 3rem;
     outline: none;
-    border: 3px solid #00846a;
+    border: 2px solid #00846a;
+    border-radius: 1rem;
   }
   svg {
     position: absolute;

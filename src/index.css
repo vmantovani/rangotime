@@ -34,6 +34,13 @@ h3 {
   margin: 2rem 0rem;
 }
 
+h2 {
+  font-size: 2rem;
+  color: rgb(57,57,57);
+  line-height: 2.5rem;
+}
+
+
 a {
   color: rgb(57,57,57);
 }

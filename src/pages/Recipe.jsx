@@ -39,7 +39,6 @@ function Recipe() {
         </Button>
         {activeTab === 'instructions' && (
           <div>
-            <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
             <p dangerouslySetInnerHTML={{ __html: details.instructions }}></p>
           </div>
         )}
@@ -70,19 +69,21 @@ const DetailWrapper = styled.div`
     margin-top: 2rem;
   }
   .active {
-    background: linear-gradient(35deg, #494949, #313131);
+    background: linear-gradient(35deg, #004242, #00846a);
     color: white;
   }
 `;
 
 const Button = styled.button`
-  padding: 0.5rem 1rem;
-  color: #313131;
+  border-radius: 1rem;
+  padding: 1rem 1.2rem;
+  color: #00846a;
   background: white;
-  border: 2px solid black;
+  border: 2px solid #00846a;
   margin-right: 1rem;
-  font-weight: 600;
+  margin-top: 1rem;
   margin-bottom: 2rem;
+  font-weight: 600;
   cursor: pointer;
 `;
 

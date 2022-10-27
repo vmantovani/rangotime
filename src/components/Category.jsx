@@ -6,21 +6,21 @@ import styled from 'styled-components';
 const Category = () => {
   return (
     <CategoryLink>
-      <SLink to={'/cuisine/Italian'}>
-        <FaPizzaSlice />
-        <h4>Italian</h4>
-      </SLink>
       <SLink to={'/cuisine/American'}>
         <FaHamburger />
         <h4>American</h4>
       </SLink>
-      <SLink to={'/cuisine/Thai'}>
-        <GiNoodles />
-        <h4>Thai</h4>
+      <SLink to={'/cuisine/Italian'}>
+        <FaPizzaSlice />
+        <h4>Italian</h4>
       </SLink>
       <SLink to={'/cuisine/Korean'}>
         <GiChopsticks />
         <h4>Korean</h4>
+      </SLink>
+      <SLink to={'/cuisine/Thai'}>
+        <GiNoodles />
+        <h4>Thai</h4>
       </SLink>
     </CategoryLink>
   );
@@ -40,7 +40,7 @@ const SLink = styled(NavLink)`
   margin-right: 5rem;
   border-radius: 2rem;
   text-decoration: none;
-  background: linear-gradient(35deg, #00846a, #004242);
+  background: linear-gradient(35deg, #004242, #00846a);
   width: 7rem;
   height: 7rem;
   cursor: pointer;
